@@ -117,3 +117,8 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.submenu {
+    transition: height .3s linear;
+    padding-left: 15% !important;
+}

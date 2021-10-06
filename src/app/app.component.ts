@@ -11,15 +11,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Taksboard', url: '/taskboard', icon: 'mail',
+    { title: 'Taksboard', icon: 'mail', open: false,
     subPages: [
-      { title1: 'Contact1', url: '', name1: 'contact1' },
-      { title1: 'Contact2', url: '', name1: 'contact2'  },
-      { title1: 'Contact3', url: '', name1: 'contact3'  },
+      { title: 'Contact1', url: '/taskboard', icon: 'business', name: 'contact1' },
+      { title: 'Contact2', url: '', icon: 'archive', name: 'contact2'  },
+      { title: 'Contact3', url: '', icon: 'archive', name: 'contact3'  },
   ]
   },
-    { title: 'Dashboard', url: '/dashboard', icon: 'home' },
-    { title: 'Project', url: '/project', icon: 'archive' },
+    { title: 'Dashboard', url: '/dashboard', icon: 'home' ,
+    open: false,
+    subPages:[
+      { title: 'Project_bks', url: '/project', icon: 'calendar' },
+      { title: 'Property_bks', url: '/property', icon: 'heart' },
+    ]},
+    { title: 'Project', url: '/project', icon: 'cog' },
     { title: 'Property', url: '/property', icon: 'heart' },
     { title: 'Setup', url: '/setup', icon: 'heart' },
     { title: 'Authentication', url: '/authentication', icon: 'paper-plane' },
