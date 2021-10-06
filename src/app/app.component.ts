@@ -11,26 +11,88 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Taksboard', icon: 'mail', open: false,
-    subPages: [
-      { title: 'Contact1', url: '/taskboard', icon: 'business', name: 'contact1' },
-      { title: 'Contact2', url: '', icon: 'archive', name: 'contact2'  },
-      { title: 'Contact3', url: '', icon: 'archive', name: 'contact3'  },
-  ]
-  },
-    { title: 'Dashboard', url: '/dashboard', icon: 'home' ,
-    open: false,
-    subPages:[
-      { title: 'Project_bks', url: '/project', icon: 'calendar' },
-      { title: 'Property_bks', url: '/property', icon: 'heart' },
-    ]},
-    { title: 'Project', url: '/project', icon: 'cog' },
-    { title: 'Property', url: '/property', icon: 'heart' },
-    { title: 'Setup', url: '/setup', icon: 'heart' },
-    { title: 'Authentication', url: '/authentication', icon: 'paper-plane' },
+    {
+      title: 'Taksboard',
+      icon: 'mail',
+      open: false,
+      subPages: [
+        {
+          title: 'Dashboard',
+          url: '/dashboard',
+          icon: 'business',
+          name: 'contact1',
+        },
+        {
+          title: 'Enquiry of Purchase',
+          url: '',
+          icon: 'archive',
+          name: 'contact2',
+        },
+        {
+          title: 'Enquiry of Lease',
+          url: '',
+          icon: 'archive',
+          name: 'contact3',
+        },
+      ],
+    },
+    {
+      title: 'Project',
+      url: '/project',
+      icon: 'home',
+      open: false,
+      subPages: [
+        { title: 'Project List', url: '/project', icon: 'calendar' },
+        { title: 'Clients', url: '/property', icon: 'heart' },
+      ],
+    },
+    {
+      title: 'Property',
+      url: '',
+      icon: 'cog',
+      open: false,
+      subPages: [
+        { title: 'Property List', url: '/property', icon: 'calendar' },
+        { title: 'Clients', url: '/property', icon: 'heart' },
+      ],
+    },
+    {
+      title: 'Setup',
+      url: '/setup',
+      icon: 'heart',
+      open: false,
+      subPages: [
+        { title: 'Employee', url: '/property', icon: 'calendar' },
+        { title: 'Lead Source', url: '/property', icon: 'heart' },
+        { title: 'Locations', url: '/property', icon: 'heart' },
+        { title: 'Property Type', url: '/property', icon: 'heart' },
+        { title: 'Budget', url: '/property', icon: 'heart' },
+      ],
+    },
+    {
+      title: 'Authentication',
+      url: '/authentication',
+      icon: 'paper-plane',
+      open: false,
+      subPages: [
+        { title: 'Users List', url: '/property', icon: 'calendar' },
+        { title: 'Access', url: '/property', icon: 'heart' },
+        { title: 'Forgot Password', url: '/property', icon: 'heart' },
+      ],
+    },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
+
+  handleMenuCloseEvent(eventIndex) {
+    this.appPages.forEach((item, index) => {
+      if(eventIndex === index) {
+        item.open = !item.open;
+      } else {
+        item.open = false;
+      }
+    });
+  }
 
   // constructor(
   //   private platform: Platform,
