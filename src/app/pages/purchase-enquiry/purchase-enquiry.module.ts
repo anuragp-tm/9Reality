@@ -1,26 +1,24 @@
 import { NgModule } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
-import { HomePageRoutingModule } from './home-routing.module';
 
+import { IonicModule } from '@ionic/angular';
+
+import { PurchaseEnquiryPageRoutingModule } from './purchase-enquiry-routing.module';
+
+import { PurchaseEnquiryPage } from './purchase-enquiry.page';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    PurchaseEnquiryPageRoutingModule,
     HttpClientModule,
     NgxDatatableModule
   ],
-  declarations: [
-    HomePage
-  ]
+  declarations: [PurchaseEnquiryPage]
 })
-export class HomePageModule {}
+export class PurchaseEnquiryPageModule {}

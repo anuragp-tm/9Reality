@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'authentication',
     loadChildren: () => import('./pages/authentication/authentication.module').then( m => m.AuthenticationPageModule)
   },
+  {
+    path: 'purchase-enquiry',
+    loadChildren: () => import('./pages/purchase-enquiry/purchase-enquiry.module').then( m => m.PurchaseEnquiryPageModule)
+  },
 ];
 
 @NgModule({
