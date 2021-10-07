@@ -24,8 +24,7 @@ export class HomePage {
     this.columns = [
       { name: 'Name' },
       { name: 'Company' },
-      { name: 'Genre' },
-      { name: 'Test' }
+      { name: 'Genre' }
     ];
 
     this.http.get<Data>('../../assets/sample-data/movies.json')
