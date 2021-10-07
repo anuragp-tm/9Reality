@@ -1,7 +1,9 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" class="ion-menubar">
       <ion-content>
+        <ion-list-header>9Reality</ion-list-header>
+        <ion-note class="email-id">hi@9reality.com</ion-note>
         <ion-list id="sideNav">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected" (click)="handleMenuCloseEvent(i)">
