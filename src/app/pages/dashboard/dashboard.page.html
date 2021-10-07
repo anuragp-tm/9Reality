@@ -7,9 +7,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <h1>I am dashboard page</h1>
-  <h2>Test message</h2>
-  <h2>Test message222</h2>
-  <h2>HI I am Sisir</h2>
+<ion-content>
+  <div class="ion-padding">
+
+    <!-- Theme classes dark, material, bootstrap -->
+    <!-- [sortType]="'multi'"  -->
+    <ngx-datatable
+      class="material"
+      [limit]="8"
+      [rows]="rows"
+      [rowHeight]="50"
+      [columns]="columns"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50">
+    </ngx-datatable>
+
+  </div>
 </ion-content>

@@ -24,7 +24,7 @@ export class AppComponent {
         },
         {
           title: 'Enquiry of Purchase',
-          url: '',
+          url: 'purchase-enquiry',
           icon: 'archive',
           name: 'contact2',
         },
