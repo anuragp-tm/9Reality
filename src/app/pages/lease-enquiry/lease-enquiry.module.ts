@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PropertyPageRoutingModule } from './property-routing.module';
+import { LeaseEnquiryPageRoutingModule } from './lease-enquiry-routing.module';
 
-import { PropertyPage } from './property.page';
+import { LeaseEnquiryPage } from './lease-enquiry.page';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
@@ -15,10 +15,10 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     CommonModule,
     FormsModule,
     IonicModule,
-    PropertyPageRoutingModule,
+    LeaseEnquiryPageRoutingModule,
     HttpClientModule,
     NgxDatatableModule
   ],
-  declarations: [PropertyPage]
+  declarations: [LeaseEnquiryPage]
 })
-export class PropertyPageModule {}
+export class LeaseEnquiryPageModule {}

@@ -1,18 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ProjectInputDetailsPage } from '../../forms/project-input-details/project-input-details.page';
-
+import { EnquiryFormLeasePage } from '../../forms/enquiry-form-lease/enquiry-form-lease.page';
 export interface Data {
   movies: string;
 }
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.page.html',
-  styleUrls: ['./project.page.scss'],
+  selector: 'app-lease-enquiry',
+  templateUrl: './lease-enquiry.page.html',
+  styleUrls: ['./lease-enquiry.page.scss'],
 })
-export class ProjectPage  {
-
+export class LeaseEnquiryPage {
   public data: Data;
   public columns: any;
   public rows: any;
@@ -49,7 +47,7 @@ export class ProjectPage  {
 
   async presentModal() {
     const modal = await this.modalController.create({
-      component: ProjectInputDetailsPage,
+      component: EnquiryFormLeasePage,
       cssClass: 'my-custom-class',
       keyboardClose: true
     });

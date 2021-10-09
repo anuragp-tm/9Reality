@@ -4,9 +4,12 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Enquiry For Purchase</ion-title>
+    <ion-button slot="end" (click)="presentModal()">
+      <ion-icon slot="start" name="add-circle-sharp"></ion-icon>
+      Add New
+    </ion-button>
   </ion-toolbar>
 </ion-header>
-
 
 <ion-content>
   <div class="ion-padding">
@@ -21,8 +24,8 @@
       [columns]="columns"
       [columnMode]="'force'"
       [headerHeight]="50"
-      [footerHeight]="50">
+      [footerHeight]="50"
+    >
     </ngx-datatable>
-
   </div>
 </ion-content>

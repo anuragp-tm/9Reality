@@ -1,0 +1,24 @@
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+ion-modal.stack-modal {
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+  --backdrop-opacity: var(--ion-backdrop-opacity, 0.32);
+}
+
+.my-custom-class {
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 90%;
+  width: 50%;
+  align-items: center;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+
+.modal-wrapper {
+  background: #222;
+}
