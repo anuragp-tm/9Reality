@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Call Back Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-title>Follow Up Call</ion-title>
+  <h6 class="ion-padding">Enter your details to receive a call back from us</h6>
+  <hr />
+  <form
+    #form="ngForm"
+    (ngSubmit)="submitForm(form)"
+    method="post"
+    class="ion-padding"
+  >
+    <ion-item class="call-back-form">
+      <!-- <ion-label position="floating">Full Name</ion-label> -->
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-input ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input ngModel name="mobileNumber"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Preferred Date & Time</ion-label>
+      <ion-datetime
+        displayFormat="YYYY-MM-DDTHH:mm"
+        ngModel
+        name="dateTime"
+      ></ion-datetime>
+    </ion-item>
+
+    <ion-button type="submit" expand="full" color="success">Submit</ion-button>
+  </form>
+  <!-- <ion-button expand="full" color="primary" (click)="loginModal()">Login to Camp</ion-button> -->
+</ion-content>
