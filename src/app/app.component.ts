@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Taksboard',
+      title: 'Taskboard',
       icon: 'mail',
       open: false,
       subPages: [
@@ -30,7 +30,7 @@ export class AppComponent {
         },
         {
           title: 'Enquiry of Lease',
-          url: '',
+          url: 'lease-enquiry',
           icon: 'archive',
           name: 'contact3',
         },
@@ -48,7 +48,7 @@ export class AppComponent {
     },
     {
       title: 'Property',
-      url: '',
+      url: '/property',
       icon: 'cog',
       open: false,
       subPages: [
