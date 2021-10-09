@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Property Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h6 class="ion-padding">Input Details for the Property</h6>
+  <hr />
+  <form
+    #form="ngForm"
+    (ngSubmit)="submitForm(form)"
+    method="post"
+    class="ion-padding"
+  >
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Type of the Property</ion-label>
+      <ion-input type="text" ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Location</ion-label>
+      <ion-input type="text" ngModel name="location"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Owner's Name</ion-label>
+      <ion-input type="text" ngModel name="ownersName"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Number</ion-label>
+      <ion-input type="text" ngModel name="contactNumber"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Persons name</ion-label>
+      <ion-input type="text" ngModel name="ContactPN"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Persons Number</ion-label>
+      <ion-input type="text" ngModel name="ContactPNumber"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Email Id</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Age of Property</ion-label>
+      <ion-input type="number" ngModel name="propertyAge"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Ownership(Lease hold / Free hold)</ion-label>
+      <ion-input type="text" ngModel name="ownership"></ion-input>
+    </ion-item>
+    <!-- this has to be dropdown -->
+    <ion-item class="call-back-form">
+      <ion-label position="floating">If Lease (BDA/GA/Housing Board)</ion-label>
+      <ion-input type="text" ngModel name="leaseDetail"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Duplex</ion-label>
+      <ion-input type="text" ngModel name="duplexDetails"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Flat</ion-label>
+      <ion-input type="text" ngModel name="flatDetails"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Direction Of Facing</ion-label>
+      <ion-input type="text" ngModel name="facingDirection"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Furnishing Details(if any)</ion-label>
+      <ion-input type="text" ngModel name="furnishingDetails"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Property Is Vacant or Occupied</ion-label>
+      <ion-input type="text" ngModel name="occupancyDetails"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Rental Income(if any)</ion-label>
+      <ion-input type="text" ngModel name="rentailIncome"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Time required to Vacate the Property</ion-label>
+      <ion-input type="text" ngModel name="timeToVacate"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Home Loan on the Property</ion-label>
+      <ion-input type="text" ngModel name="homeLoanInformation"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Society Charges(if any)</ion-label>
+      <ion-input type="text" ngModel name="societyMaintenance"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Price</ion-label>
+      <ion-input type="text" ngModel name="price"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Suitable Time to Visit Property</ion-label>
+      <ion-input type="text" ngModel name="timeToVisitProperty"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">List Of papers available with the Owner</ion-label>
+      <ion-input type="text" ngModel name="papersList"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Is All Papers & Approvals Done</ion-label>
+      <ion-input type="text" ngModel name="papersApprovalDetails"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Other Terms of the Owner</ion-label>
+      <ion-input type="text" ngModel name="otherTerms"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="full" color="success">Submit</ion-button>
+  </form>
+</ion-content>
