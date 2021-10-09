@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Purchase Enquiry Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h6 class="ion-padding">Lead entry Input details for Purchase</h6>
+  <hr />
+  <form
+    #form="ngForm"
+    (ngSubmit)="submitForm(form)"
+    method="post"
+    class="ion-padding"
+  >
+    <ion-item class="call-back-form">
+      <!-- <ion-label position="floating">Full Name</ion-label> -->
+      <ion-label position="floating">Client Name</ion-label>
+      <ion-input ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Number1</ion-label>
+      <ion-input ngModel name="contactNumber1"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Number2</ion-label>
+      <ion-input ngModel name="contactNumber2"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Email Id</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="email" ngModel name="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Enquiry Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" ngModel name="enquiryDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Call Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" ngModel name="lastCallDate"></ion-datetime>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Enquiry Source</ion-label>
+      <ion-input type="email" ngModel name="enquirySource"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Purpose</ion-label>
+      <ion-input type="email" ngModel name="purpose"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Requirement</ion-label>
+      <ion-input type="email" ngModel name="requirement"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Next Call Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" ngModel name="nextCallDate"></ion-datetime>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Priority</ion-label>
+      <ion-input type="email" ngModel name="priority"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Preferred Location 1</ion-label>
+      <ion-input type="email" ngModel name="pl1"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Preferred Location 2</ion-label>
+      <ion-input type="email" ngModel name="pl2"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Budget</ion-label>
+      <ion-input type="email" ngModel name="budget"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Interested Project 1</ion-label>
+      <ion-input type="email" ngModel name="ip1"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Interested Project 2</ion-label>
+      <ion-input type="email" ngModel name="ip2"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Site Visited</ion-label>
+      <ion-input type="email" ngModel name="siteVisited"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Site Visit By (Employee)</ion-label>
+      <ion-input type="email" ngModel name="siteVisitBy"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Site Visit Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" ngModel name="siteVisitDate"></ion-datetime>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Remarks</ion-label>
+      <ion-input type="email" ngModel name="remarks"></ion-input>
+    </ion-item>
+
+
+    <ion-button type="submit" expand="full" color="success">Submit</ion-button>
+  </form>
+  <!-- <ion-button expand="full" color="primary" (click)="loginModal()">Login to Camp</ion-button> -->
+</ion-content>

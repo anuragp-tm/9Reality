@@ -39,6 +39,30 @@ const routes: Routes = [
     path: 'purchase-enquiry',
     loadChildren: () => import('./pages/purchase-enquiry/purchase-enquiry.module').then( m => m.PurchaseEnquiryPageModule)
   },
+  {
+    path: 'call-back-form',
+    loadChildren: () => import('./forms/call-back-form/call-back-form.module').then( m => m.CallBackFormPageModule)
+  },
+  {
+    path: 'enquiry-form-purchase',
+    loadChildren: () => import('./forms/enquiry-form-purchase/enquiry-form-purchase.module').then( m => m.EnquiryFormPurchasePageModule)
+  },
+  {
+    path: 'enquiry-form-lease',
+    loadChildren: () => import('./forms/enquiry-form-lease/enquiry-form-lease.module').then( m => m.EnquiryFormLeasePageModule)
+  },
+  {
+    path: 'project-input-details',
+    loadChildren: () => import('./forms/project-input-details/project-input-details.module').then( m => m.ProjectInputDetailsPageModule)
+  },
+  {
+    path: 'property-input-details',
+    loadChildren: () => import('./forms/property-input-details/property-input-details.module').then( m => m.PropertyInputDetailsPageModule)
+  },
+  {
+    path: 'employee-input-details',
+    loadChildren: () => import('./forms/employee-input-details/employee-input-details.module').then( m => m.EmployeeInputDetailsPageModule)
+  },
 ];
 
 @NgModule({

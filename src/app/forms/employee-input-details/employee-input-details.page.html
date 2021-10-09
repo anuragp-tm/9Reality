@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Employee Input Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h6 class="ion-padding">Enter Employee Details</h6>
+  <hr />
+  <form
+    #form="ngForm"
+    (ngSubmit)="submitForm(form)"
+    method="post"
+    class="ion-padding"
+  >
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-input ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Number</ion-label>
+      <ion-input ngModel name="mobileNumber"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Designation</ion-label>
+      <ion-input type="email" ngModel name="designation"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Division</ion-label>
+      <ion-input type="email" ngModel name="division"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Reporting Authority</ion-label>
+      <ion-input type="email" ngModel name="reportingAuthority"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="full" color="success">Submit</ion-button>
+  </form>
+</ion-content>
