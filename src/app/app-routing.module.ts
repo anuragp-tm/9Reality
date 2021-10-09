@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'enquiry-form-purchase',
     loadChildren: () => import('./forms/enquiry-form-purchase/enquiry-form-purchase.module').then( m => m.EnquiryFormPurchasePageModule)
   },
+  {
+    path: 'enquiry-form-lease',
+    loadChildren: () => import('./forms/enquiry-form-lease/enquiry-form-lease.module').then( m => m.EnquiryFormLeasePageModule)
+  },
 ];
 
 @NgModule({
