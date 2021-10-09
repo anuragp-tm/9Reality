@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'property-input-details',
     loadChildren: () => import('./forms/property-input-details/property-input-details.module').then( m => m.PropertyInputDetailsPageModule)
   },
+  {
+    path: 'employee-input-details',
+    loadChildren: () => import('./forms/employee-input-details/employee-input-details.module').then( m => m.EmployeeInputDetailsPageModule)
+  },
 ];
 
 @NgModule({
