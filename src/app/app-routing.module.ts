@@ -63,6 +63,14 @@ const routes: Routes = [
     path: 'employee-input-details',
     loadChildren: () => import('./forms/employee-input-details/employee-input-details.module').then( m => m.EmployeeInputDetailsPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 
 @NgModule({
