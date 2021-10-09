@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Project Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h6 class="ion-padding">Input Details for the Project</h6>
+  <hr />
+  <form
+    #form="ngForm"
+    (ngSubmit)="submitForm(form)"
+    method="post"
+    class="ion-padding"
+  >
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Name of the Project</ion-label>
+      <ion-input type="text" ngModel name="name"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Location</ion-label>
+      <ion-input type="text" ngModel name="location"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Promoter Name</ion-label>
+      <ion-input type="text" ngModel name="promoterName"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Concerned Person From Promoter Side</ion-label>
+      <ion-input type="text" ngModel name="cPrometer"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Contact Number of Concerned Person</ion-label>
+      <ion-input type="text" ngModel name="numberCP"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Designation of Concerned Person</ion-label>
+      <ion-input type="text" ngModel name="designationCP"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Email Id</ion-label>
+      <ion-input type="email" ngModel name="email"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Rera Approval Number</ion-label>
+      <ion-input type="text" ngModel name="reraNumber"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Land Area</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <!-- this has to be dropdown -->
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Type</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">No. of Units</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">No. of Floors</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Facilities</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Amenties</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Stage Of Construction</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Proposed Date Of Completion</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Payment Schedule</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Distance From Prominent Locations</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Furnishing Details(if any)</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Other Details</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <!-- Todo: Upload Brochure & Views -->
+    <!-- Todo: Upload Present Pics -->
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Price Calculation</ion-label>
+      <ion-input type="text" ngModel name="landArea"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="full" color="success">Submit</ion-button>
+  </form>
+  <!-- <ion-button expand="full" color="primary" (click)="loginModal()">Login to Camp</ion-button> -->
+</ion-content>
