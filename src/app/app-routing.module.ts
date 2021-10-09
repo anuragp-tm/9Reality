@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'call-back-form',
     loadChildren: () => import('./forms/call-back-form/call-back-form.module').then( m => m.CallBackFormPageModule)
   },
+  {
+    path: 'enquiry-form-purchase',
+    loadChildren: () => import('./forms/enquiry-form-purchase/enquiry-form-purchase.module').then( m => m.EnquiryFormPurchasePageModule)
+  },
 ];
 
 @NgModule({
