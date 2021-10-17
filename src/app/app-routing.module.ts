@@ -79,6 +79,18 @@ const routes: Routes = [
     path: 'locations',
     loadChildren: () => import('./pages/locations/locations.module').then( m => m.LocationsPageModule)
   },
+  {
+    path: 'budget',
+    loadChildren: () => import('./pages/budget/budget.module').then( m => m.BudgetPageModule)
+  },
+  {
+    path: 'property-type',
+    loadChildren: () => import('./pages/property-type/property-type.module').then( m => m.PropertyTypePageModule)
+  },
+  {
+    path: 'lead-source',
+    loadChildren: () => import('./pages/lead-source/lead-source.module').then( m => m.LeadSourcePageModule)
+  },
 ];
 
 @NgModule({

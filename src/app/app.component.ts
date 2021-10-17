@@ -63,10 +63,10 @@ export class AppComponent {
       open: false,
       subPages: [
         { title: 'Employee', url: '/property', icon: 'calendar' },
-        { title: 'Lead Source', url: '/property', icon: 'heart' },
+        { title: 'Lead Source', url: '/lead-source', icon: 'heart' },
         { title: 'Locations', url: '/locations', icon: 'heart' },
-        { title: 'Property Type', url: '/property', icon: 'heart' },
-        { title: 'Budget', url: '/property', icon: 'heart' },
+        { title: 'Property Type', url: '/property-type', icon: 'heart' },
+        { title: 'Budget', url: '/budget', icon: 'heart' },
       ],
     },
     {
