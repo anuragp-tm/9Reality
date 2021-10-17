@@ -64,7 +64,7 @@ export class AppComponent {
       subPages: [
         { title: 'Employee', url: '/property', icon: 'calendar' },
         { title: 'Lead Source', url: '/property', icon: 'heart' },
-        { title: 'Locations', url: '/property', icon: 'heart' },
+        { title: 'Locations', url: '/locations', icon: 'heart' },
         { title: 'Property Type', url: '/property', icon: 'heart' },
         { title: 'Budget', url: '/property', icon: 'heart' },
       ],

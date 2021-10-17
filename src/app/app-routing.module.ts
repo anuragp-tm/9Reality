@@ -75,6 +75,10 @@ const routes: Routes = [
     path: 'lease-enquiry',
     loadChildren: () => import('./pages/lease-enquiry/lease-enquiry.module').then( m => m.LeaseEnquiryPageModule)
   },
+  {
+    path: 'locations',
+    loadChildren: () => import('./pages/locations/locations.module').then( m => m.LocationsPageModule)
+  },
 ];
 
 @NgModule({
