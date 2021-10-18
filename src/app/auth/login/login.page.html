@@ -7,21 +7,34 @@
 
 <ion-content class="ion-padding">
   <form #form="ngForm" (ngSubmit)="login(form)" method="post">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input ngModel type="email" name="email"></ion-input>
-    </ion-item>
+    <div text-center>
+      <h3>LOGIN TO YOUR ACCOUNT</h3>
+    </div>
+    <div padding>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input ngModel type="email" name="email" ngModel required></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input ngModel type="password" name="password"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input ngModel type="password" name="password" ngModel required></ion-input>
+      </ion-item>
+      &nbsp;
+      <div>
+
+        <ion-checkbox ></ion-checkbox>
+        <ion-label> Remember Me</ion-label>
+      </div>
+
+
+    </div>
 
     <p text-right><a routerLink="#">Forgot Password?</a></p>
 
     <ion-button type="submit" expand="full" color="primary">Login</ion-button>
   </form>
 
-  <p text-center>Don't have a account?</p>
-  <a routerLink='/register'>Register</a>
+  <p text-center>Don't have a account? <a routerLink='/register'>Register</a></p>
+
 </ion-content>
