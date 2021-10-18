@@ -17,11 +17,11 @@
       <ion-input ngModel type="password" name="password"></ion-input>
     </ion-item>
 
-    <p text-right>Forgot Password?</p>
+    <p text-right><a routerLink="#">Forgot Password?</a></p>
 
     <ion-button type="submit" expand="full" color="primary">Login</ion-button>
   </form>
 
   <p text-center>Don't have a account?</p>
-  <ion-button expand="full" color="danger" (click)="registerModal()">Register</ion-button>
+  <a routerLink='/register'>Register</a>
 </ion-content>
