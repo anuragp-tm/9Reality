@@ -48,24 +48,35 @@
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Rera Approval Number</ion-label>
-      <ion-input type="text" ngModel name="reraNumber"></ion-input>
+      <ion-input type="number" ngModel name="reraNumber"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Land Area</ion-label>
       <ion-input type="text" ngModel name="landArea"></ion-input>
     </ion-item>
     <!-- this has to be dropdown -->
-    <ion-item class="call-back-form">
-      <ion-label position="floating">Type</ion-label>
-      <ion-input type="text" ngModel name="type"></ion-input>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          Type
+        </ion-label>
+      </ion-list-header>
+    <ion-item class="call-back-form" name="type">
+
+      <ion-select placeholder="Select Type">
+        <ion-select-option value="duplex">Duplex</ion-select-option>
+        <ion-select-option value="flat">Flat</ion-select-option>
+
+      </ion-select>
     </ion-item>
+    </ion-list>
     <ion-item class="call-back-form">
       <ion-label position="floating">No. of Units</ion-label>
-      <ion-input type="text" ngModel name="unitsNumber"></ion-input>
+      <ion-input type="number" ngModel name="unitsNumber"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">No. of Floors</ion-label>
-      <ion-input type="text" ngModel name="floorsNumber"></ion-input>
+      <ion-input type="number" ngModel name="floorsNumber"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Facilities</ion-label>
@@ -81,7 +92,7 @@
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Proposed Date Of Completion</ion-label>
-      <ion-input type="text" ngModel name="proposedDateCompletion"></ion-input>
+      <ion-datetime displayFormat="DD-MMM-YYYY" ngModel name="proposedDateCompletion"></ion-datetime>
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Payment Schedule</ion-label>
@@ -92,7 +103,7 @@
       <ion-input type="text" ngModel name="distanceFromLocations"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">
-      <ion-label position="floating">Furnishing Details(if any)</ion-label>
+      <ion-label position="floating">Furnishing Details(If Any)</ion-label>
       <ion-input type="text" ngModel name="furnishingDetails"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">

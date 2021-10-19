@@ -57,12 +57,12 @@
           <ion-label>Ownership</ion-label>
         </ion-list-header>
 
-        <ion-item class="call-back-form">
+        <ion-item class="call-back-form" name="leasehold">
           <ion-label>Lease Hold</ion-label>
           <ion-radio slot="start" value="lease"></ion-radio>
         </ion-item>
 
-        <ion-item class="call-back-form">
+        <ion-item class="call-back-form" name="freehold">
           <ion-label>Free Hold</ion-label>
           <ion-radio slot="start" value="free"></ion-radio>
         </ion-item>
@@ -76,7 +76,7 @@
           If Lease
         </ion-label>
       </ion-list-header>
-    <ion-item class="call-back-form">
+    <ion-item class="call-back-form" name="lease">
 
       <ion-select placeholder="Select One">
         <ion-select-option value="bda">BDA</ion-select-option>
@@ -105,7 +105,7 @@
         <ion-select-option value="north">North</ion-select-option>
         <ion-select-option value="south">South</ion-select-option>
         <ion-select-option value="east">East</ion-select-option>
-        <ion-select-option value="east">West</ion-select-option>
+        <ion-select-option value="west">West</ion-select-option>
       </ion-select>
     </ion-item>
     </ion-list>
@@ -139,7 +139,7 @@
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Suitable Time to Visit Property</ion-label>
-      <ion-datetime placeholder="Select Date" displayFormat="DD-MMM-YYYY-HH:mm"></ion-datetime>
+      <ion-datetime placeholder="Select Date" displayFormat="DD-MMM-YYYY-HH:mm" name="timeToVisitProperty"></ion-datetime>
 </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">List Of papers available with the Owner</ion-label>
@@ -151,12 +151,12 @@
           <ion-label>Are All Papers and Approvals Done ?</ion-label>
         </ion-list-header>
 
-        <ion-item class="call-back-form">
+        <ion-item class="call-back-form" name="yes">
           <ion-label>Yes</ion-label>
           <ion-radio slot="start" value="yes"></ion-radio>
         </ion-item>
 
-        <ion-item class="call-back-form">
+        <ion-item class="call-back-form" name="no">
           <ion-label>No</ion-label>
           <ion-radio slot="start" value="no"></ion-radio>
         </ion-item>

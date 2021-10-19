@@ -10,7 +10,7 @@
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label position="stacked">Add New Budget Criteria</ion-label>
-    <ion-input (keyup.enter)="addLocation($event.target.value); $event.target.value =''"></ion-input>
+    <ion-input (keyup.enter)="addBudget($event.target.value)"></ion-input>
   </ion-item>
   <br><br>
   <ion-item-divider color="light">
@@ -19,7 +19,7 @@
     </ion-label>
   </ion-item-divider>
   <ion-list>
-    <div *ngFor="let source of budget; let i = index">
+    <div *ngFor="let source of budgets; let i = index">
         <ion-item >
           <ion-label>{{source.value}}</ion-label>
           <ion-toggle [checked]="source.enabled" (ionChange)='onChangeStatus(i, source.enabled)'></ion-toggle>

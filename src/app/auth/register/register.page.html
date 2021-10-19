@@ -5,37 +5,38 @@
 </ion-header>
 
 <ion-content class="ionic-padding">
-  <form  #form="ngForm" (ngSubmit)="register(form)" method="post">
+  <form  #form="ngForm" (ngSubmit)="register(form)" method="post" [formGroup]="formGroup">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
           <div text-center>
+            <!--create admin account-->
             <h3>CREATE YOUR ACCOUNT !</h3>
           </div>
           <div padding>
             <ion-item>
               <ion-label position="floating">Full Name</ion-label>
-              <ion-input  name="name" type="text"  ngModel required></ion-input>
+              <ion-input  name="fullname" type="text" formControlName="fullnameControl"  ngModel required></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Username</ion-label>
-              <ion-input  name="username" type="text"  ngModel required></ion-input>
+              <ion-input  name="username" type="text" formControlName="usernameControl" ngModel required></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Email</ion-label>
-              <ion-input name="email" type="email"  ngModel required></ion-input>
+              <ion-input name="email" type="email" formControlName="emailControl"  ngModel required></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Mobile</ion-label>
-              <ion-input name="mobile" type="phone"  ngModel required></ion-input>
+              <ion-input name="mobile" type="tel" formControlName="mobileControl"  ngModel required></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Password</ion-label>
-              <ion-input name="password" type="password"  ngModel required></ion-input>
+              <ion-input name="password" type="password" formControlName="passControl" ngModel required></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="floating">Confirm Password</ion-label>
-              <ion-input name="confirm" type="password" ngModel required></ion-input>
+              <ion-input name="confirm" type="password" formControlName="cpassControl" ngModel required></ion-input>
             </ion-item>
           </div>
           <div padding>

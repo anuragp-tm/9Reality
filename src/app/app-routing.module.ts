@@ -91,6 +91,15 @@ const routes: Routes = [
     path: 'lead-source',
     loadChildren: () => import('./pages/lead-source/lead-source.module').then( m => m.LeadSourcePageModule)
   },
+  {
+    path: 'update-password',
+    loadChildren: () => import('./pages//update-password/update-password.module').then( m => m.UpdatePasswordPageModule)
+  },
+  {
+    path: 'update-profile',
+    loadChildren: () => import('./pages//update-profile/update-profile.module').then( m => m.UpdateProfilePageModule)
+  },
+
 ];
 
 @NgModule({
