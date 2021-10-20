@@ -98,7 +98,11 @@ const routes: Routes = [
   {
     path: 'update-profile',
     loadChildren: () => import('./pages//update-profile/update-profile.module').then( m => m.UpdateProfilePageModule)
+  },  {
+    path: 'employee',
+    loadChildren: () => import('./pages/employee/employee.module').then( m => m.EmployeePageModule)
   },
+
 
 ];
 

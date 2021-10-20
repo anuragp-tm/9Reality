@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./budget.page.scss'],
 })
 export class BudgetPage implements OnInit {
-
+  budget: any;
   public budgets = [
     { value: '10-20 Lakhs', enabled: true },
     { value: '20-30 Lakhs', enabled: true },
@@ -24,26 +24,34 @@ export class BudgetPage implements OnInit {
   }
 
   addBudget(budget) {
+    console.log('budget',this.budget);
+    const httpOptions={
+      headers:new HttpHeaders(
+        {
 
-    const headers = new Headers();
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type':'application/json',
+          'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+          'Access-Control-Allow-Headers': 'Origin,Accept,Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
+        })
+    };
+    const headers = new HttpHeaders();
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json' );
 
-    const budgetData={
-      budget_amount :'3000',
-      is_active:1,
-      created_date:'2020-10-09',
-      updated_date:'2020-12-10'
-    };
+    const budgetData={data:{
+      budget_amount :this.budget,
+      is_active:1
+    }};
 
-    this.http.post('localhost/9realityApi/budget/create.php', JSON.stringify(budgetData))
+    this.http.post('http://localhost/9realityApi/budget/create.php', JSON.stringify(budgetData),httpOptions)
       .subscribe(data => {
       console.log(data);
     },
     (error) => {
             console.log( error);
     });
-    this.budgets.unshift({value:budgetData.budget_amount, enabled: true});
+    this.budgets.unshift({value:budget, enabled: true});
   }
 
   onChangeStatus(index, value) {

@@ -1,3 +1,5 @@
+<!--Budget Page-->
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -8,14 +10,16 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <!--Add New Budget -->
   <ion-item>
     <ion-label position="stacked">Add New Budget Criteria</ion-label>
-    <ion-input (keyup.enter)="addBudget($event.target.value)"></ion-input>
+    <ion-input name="budget" id="budget" [(ngModel)]="budget" (keyup.enter)="addBudget($event.target.value)"></ion-input>
   </ion-item>
   <br><br>
+  <!--List of budgets -->
   <ion-item-divider color="light">
     <ion-label>
-      List of Budget
+      List of Budgets
     </ion-label>
   </ion-item-divider>
   <ion-list>
@@ -23,8 +27,7 @@
         <ion-item >
           <ion-label>{{source.value}}</ion-label>
           <ion-toggle [checked]="source.enabled" (ionChange)='onChangeStatus(i, source.enabled)'></ion-toggle>
-          <!-- <ion-checkbox *ngIf="bullet.checked == true" color="pink" disabled="true" checked="true"></ion-checkbox>
-          <ion-checkbox *ngIf="bullet.checked == false" color="pink" [(ngModel)]="cucumber" (ionChange)="updateCucumber(bullet.$key==bullet.description)"></ion-checkbox> -->
+
         </ion-item>
     </div>
       </ion-list>

@@ -3,12 +3,15 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Employee Input Details</ion-title>
+    <ion-title>Add New Employee</ion-title>
+    <ion-button slot="end" (click) = "dismiss()">
+      Close( X )
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-  <h6 class="ion-padding">Enter Employee Details</h6>
-  <hr />
+  <!--<h6 class="ion-padding">Enter Employee Details</h6>
+  <hr />-->
   <form
     #form="ngForm"
     (ngSubmit)="submitForm(form)"
@@ -17,23 +20,71 @@
   >
     <ion-item class="call-back-form">
       <ion-label position="floating">Full Name</ion-label>
-      <ion-input ngModel name="name"></ion-input>
+      <ion-input ngModel name="emp_name" type="text" maxlength="32"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">
-      <ion-label position="floating">Contact Number</ion-label>
-      <ion-input ngModel name="mobileNumber"></ion-input>
+      <ion-label position="floating">Email Id</ion-label>
+      <ion-input ngModel name="email_id" maxlength="32"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Mobile Number</ion-label>
+      <ion-input ngModel name="emp_mobile_no" type="number" maxlength="10"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Pan No</ion-label>
+      <ion-input ngModel name="emp_pan_no" maxlength="10"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Address</ion-label>
+      <ion-input ngModel name="emp_address" maxlength="64"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item class="call-back-form">
+        <ion-label position="floating">State</ion-label>
+        <ion-select [ngModel] = "idState" name="state" cancelText="Cancel" okText="Ok" (ngModelChange)="getCityByState()">
+          <ion-select-option *ngFor ="let sData of this.rows" [value]="sData" >{{sData.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="call-back-form">
+        <ion-label position="floating">City</ion-label>
+        <ion-select [ngModel] = "idCity" name="city" cancelText="Cancel" okText="Ok" >
+          <ion-select-option  *ngFor ="let cData of this.rowss" [value]="cData" >{{cData.city}}</ion-select-option>
+          <!--<ion-select-option value="386">Cuttack</ion-select-option>
+          <ion-select-option value="407">Sambalpur</ion-select-option>
+          <ion-select-option value="409">Sundargarh</ion-select-option> -->
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Pincode</ion-label>
+      <ion-input ngModel name="pincode" type="number" maxlength="6"></ion-input>
     </ion-item>
     <ion-item class="call-back-form">
       <ion-label position="floating">Designation</ion-label>
-      <ion-input type="email" ngModel name="designation"></ion-input>
+      <ion-select [ngModel] = "idDesignation" name="designation" cancelText="Cancel" okText="Ok">
+        <ion-select-option *ngFor ="let designationData of this.designationrows" [value]="designationData" >{{designationData.designation_name}}</ion-select-option>
+      </ion-select>
     </ion-item>
-    <ion-item class="call-back-form">
+  <!--  <ion-item class="call-back-form">
       <ion-label position="floating">Division</ion-label>
       <ion-input type="email" ngModel name="division"></ion-input>
-    </ion-item>
+    </ion-item>-->
     <ion-item class="call-back-form">
       <ion-label position="floating">Reporting Authority</ion-label>
-      <ion-input type="email" ngModel name="reportingAuthority"></ion-input>
+      <!--<ion-input type="email" ngModel name="reportingAuthority"></ion-input> -->
+      <ion-select [ngModel] = "idEmp" name="reportingAuthority" cancelText="Cancel" okText="Ok">
+        <ion-select-option  *ngFor ="let empData of this.emprows" [value]="empData" >{{empData.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" ngModel name="password" maxlength="15"></ion-input>
+    </ion-item>
+    <ion-item class="call-back-form">
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" ngModel name="cPassword" maxlength="6"></ion-input>
     </ion-item>
 
     <ion-button type="submit" expand="full" color="success">Submit</ion-button>
