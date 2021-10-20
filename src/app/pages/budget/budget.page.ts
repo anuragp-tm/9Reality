@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 /* eslint-disable @typescript-eslint/naming-convention */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -25,26 +26,28 @@ export class BudgetPage implements OnInit {
 
   addBudget(budget) {
     console.log('budget',this.budget);
-    const httpOptions={
+    /*const httpOptions={
       headers:new HttpHeaders(
         {
-
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'http://localhost:8100/',
           'Content-Type':'application/json',
           'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
           'Access-Control-Allow-Headers': 'Origin,Accept,Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With'
-        })
-    };
+        }),credentials:true
+    };*/
     const headers = new HttpHeaders();
-    headers.append('Accept', 'application/json');
-    headers.append('Content-Type', 'application/json' );
+    headers.append('Access-Control-Allow-Origin' , '*');
+    headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    headers.append('Accept','application/json');
+    headers.append('content-type','application/json');
 
-    const budgetData={data:{
+    const budgetData={
       budget_amount :this.budget,
-      is_active:1
-    }};
+      is_active:1,
 
-    this.http.post('http://localhost/9realityApi/budget/create.php', JSON.stringify(budgetData),httpOptions)
+  };
+
+    this.http.post('http://localhost/9realityApi/budget/create.php', JSON.stringify(budgetData))
       .subscribe(data => {
       console.log(data);
     },
